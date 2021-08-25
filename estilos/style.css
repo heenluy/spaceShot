@@ -1,0 +1,134 @@
+* {
+    font-family: monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: xx-large;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h3 {
+    margin-bottom: 5px;
+    font-size: x-large;
+}
+
+span, p {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    
+    background: linear-gradient(rgb(13, 0, 37), rgb(49, 0, 139));
+    color: white;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.jogador {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+
+    background-image: url(../imagens/nave_jog.gif);
+}
+
+.card {
+    /* Manipular o Display Através do JS */
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 550px;
+    height: 450px;
+
+    /*Deixar Centralizado na tela visível*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: rgba(245, 245, 245, 0.9);
+    color: rgb(13, 0, 37);
+    border-radius: 25px;
+    z-index: 1000;
+}
+
+.card .objetivo, .card .comandos {
+    width: 100%;
+    text-align: center;
+}
+
+.play {
+    padding: 10px 16px;
+    color: rgb(13, 0, 37);
+    text-align: center;
+    outline: none;
+    border: 2.5px solid rgb(13, 0, 37);
+    background-color: initial;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 7.5px;
+    transition: 0.4s ease-out;
+    cursor: pointer;
+}
+
+.play:hover {
+    background-color: rgb(13, 0, 37);
+    color: whitesmoke;
+}
+
+#life {
+    margin: 10px;
+
+    display: fixed;
+    width: 300px;
+    height: 14px;
+
+    border-radius: 8px;
+
+    background: linear-gradient(90deg, #5C258D, #4389A2);
+}
+
+.playerShot {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    position: absolute;
+    background: powderblue;
+}
+
+.bomba {
+    height: 40px;
+    width: 24px;
+
+    display: block;
+    position: absolute;
+
+    background-image: url(../imagens/bomba.gif);
+}
+
+.explosaoSolo {
+    width: 55px;
+    height: 57px;
+    position: absolute;
+}
+
+.explosaoAr {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+}
+
+.modal {
+    display: block;
+}
